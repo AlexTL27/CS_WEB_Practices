@@ -1,0 +1,34 @@
+﻿@page
+@model APILocalizacion.Pages.IndexModel
+@{
+}
+
+@section Styles {
+    <link href="~/css/index.css" rel="stylesheet" />
+}
+<div class="contenido">
+
+    <form id="obtenerUbicacion" method="post">
+        <input type="text" id="ip" placeholder="192.168.0.1" asp-for="IpIngresada">
+        <button class="accordion-button bg-opacity-75">Obtener ubicación</button>
+    </form>
+    @if (Model.modelo.error){
+        <div class="information">
+            <img src="~/img/gatoError.png" alt="Alternate Text" class="errorImg"/>
+        </div>
+        
+    }else if (Model.modelo.city != null)
+    {
+        <div class="information">
+            <h2>Información de la ip</h2>
+
+            <p>IP: @Model.modelo.ip</p>
+            <p>País: @Model.modelo.country</p>
+            <p>Ciudad: @Model.modelo.city</p>
+            <p>Latitud: @Model.modelo.latitude</p>
+            <p>Longitud: @Model.modelo.longitude</p>
+            <img src="@Model.modelo.flag.img" width="100" />
+
+        </div>
+    }
+</div>

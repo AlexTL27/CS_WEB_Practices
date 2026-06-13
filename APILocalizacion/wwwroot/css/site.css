@@ -1,0 +1,46 @@
+html {
+  font-size: 14px;
+}
+
+.contenido {
+    box-sizing: border-box;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.information {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+
+#ip {
+    font-size: 17px;
+    border: none;
+    border-bottom: groove;
+    border-radius: 4px;
+    border-color: rgb(56, 124, 107);
+}
+
+.errorImg {
+    width: 220px;
+    height: auto;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}

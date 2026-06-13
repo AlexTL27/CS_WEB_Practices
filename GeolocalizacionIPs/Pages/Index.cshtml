@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<form class="mb-4" id="opcion">
+
+    <!-- Ejemplo básico -->
+    <label for="">Elige una opción de filtrado:</label>
+    <select name="opciones" id="opciones">
+        <option value="opcion1" selected>Todas (por defecto)</option>
+        <option value="opcion2">Eliminar IPs Repetidas</option>
+        <option value="opcion3">Opción 3</option>
+    </select>
+
+    <p class="alert-danger m-5 border-3 p-2" style="display: inline">@Model.ErrorMsj</p>
+</form>
+
+<div class="text-center">
+   <table class="table table-striped table-bordered">
+
+       <thead class="table-dark">
+           <tr>
+                <th>IP</th>
+                <th>Sitio</th>
+                <th>País</th>
+                <th>Ciudad</th>
+           </tr>
+       </thead>
+       <tbody>
+            @foreach(var item in Model.SitiosVisitados)
+            {
+                <tr>
+                    <td>@item.ip</td>
+                    <td>@item.sitio</td>
+                    <td>@item.country</td>
+                    <td>@item.city</td>
+
+                </tr>
+            }
+        </tbody>
+
+
+   </table>
+</div>
