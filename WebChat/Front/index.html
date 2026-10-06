@@ -7,21 +7,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="content">
-        <div class="mensaje_recibido">
-            <p>Holaa, como estas?</p>
-        </div>
 
-        <div class="mensaje_enviado">
-            <p>bienn, gratzias uwu</p>
-        </div>
+    <!-- Aquí se insertarán los mensajes -->
+    <div id="contenedor-chats" class="content">
+        <template id="tpl-recibido">
+            <div class="mensaje_recibido">
+                <p class="texto-mensaje"></p>
+             </div>
+        </template>
+    
+        <template id="tpl-enviado">
+            <div class="mensaje_enviado">
+                <p class="texto-mensaje"></p>
+            </div>
+        </template>
     </div>
+
+    <!-- Form para enviar mensajes -->
     <div class="send_message">
         <form action="">
             <input type="text" placeholder="Escribe aquí...">
             <button type="submit">Send</button>
         </form>
     </div>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+    <script src="codigo.js"></script>
 </body>
 </html>
